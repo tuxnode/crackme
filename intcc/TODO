@@ -1,0 +1,5 @@
+Reverse Challenge
+
+主要实现反调试功能
+
+额外进程扫描.text内存区域，int3
