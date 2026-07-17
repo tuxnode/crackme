@@ -362,7 +362,14 @@ int main(void) {
 
     unsigned char h = checksum();
     if (h != 0x00) {
-        puts("[-] checksum failed");
+        printf("[-] checksum failed (got 0x%02x)\n", h);
+        printf("[-] chunk1: ", h);
+        for (int i = 0; i < 8; i++) printf("%02x ", chunk1[i]);
+        printf("\n[-] chunk2: ");
+        for (int i = 0; i < 8; i++) printf("%02x ", chunk2[i]);
+        printf("\n[-] chunk3: ");
+        for (int i = 0; i < 7; i++) printf("%02x ", chunk3[i]);
+        printf("\n");
         return 1;
     }
 
